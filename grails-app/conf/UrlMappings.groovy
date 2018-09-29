@@ -5,27 +5,27 @@ class UrlMappings {
 
         //"/gastos"(controller: "libro", action: "getLibros")
 
-        "/gastos/libro"(controller: "libro", parseRequest: true) {
+        "/libro"(controller: "libro", parseRequest: true) {
             action = [POST: 'postLibro']
         }
 
-        "/gastos/libro/$id"(controller: "libro", parseRequest: true) {
+        "/libro/$id"(controller: "libro", parseRequest: true) {
             action = [GET: 'getLibro']
         }
 
-        "/gastos/libros"(controller: "libro", parseRequest: true) {
+        "/libros"(controller: "libro", parseRequest: true) {
             action = [GET: 'getLibros']
         }
 
-        "/gastos/$idLibro/movimiento"(controller: "movimiento", parseRequest: true) {
+        "/$idLibro/movimiento"(controller: "movimiento", parseRequest: true) {
             action = [POST: 'postMovimiento']
         }
 
-        "/gastos/movimiento/$idMovimiento"(controller: "movimiento", parseRequest: true) {
+        "/movimiento/$idMovimiento"(controller: "movimiento", parseRequest: true) {
             action = [GET: 'getMovimiento']
         }
 
-        "/gastos/libro/$idLibro/movimientos"(controller: "movimiento", parseRequest: true) {
+        "/libro/$idLibro/movimientos"(controller: "movimiento", parseRequest: true) {
             action = [GET: 'getMovimientos']
         }
         "/ping"(controller: "libro", parseRequest: true){
